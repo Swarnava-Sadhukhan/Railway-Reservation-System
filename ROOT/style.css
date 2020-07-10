@@ -1,0 +1,85 @@
+.navbar
+{
+    width: 100%;
+    height: 90px;
+    background-color: olivedrab;
+    padding-left:50px;
+    padding-right:50px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:50px;
+    color: floralwhite;
+}
+
+.login
+{
+    width: 100%;
+    height: 600px;
+    background-color: #222222;
+    padding-top:100px;
+    padding-left:200px;
+    padding-right:50px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    align-items: flex-start;
+    color: dimgrey;
+}
+
+.loginForm
+{
+    width: 500px;
+    height: 30px;
+    background-color: #FFFFFF;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    align-content: center;
+    color: grey;
+    border: none;
+}
+
+button
+{
+    background-color: cadetblue;
+    width: 200px;
+    height: 50px;
+    background-position: right;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    color: white;
+    align-content: center;
+    border: none;
+    border-radius: 5px;
+}
+button:hover
+{
+    background-color: #308090
+}
+
+.homeScreen
+{
+    width: 95%;
+    min-height: 600px;
+    background-color: #222222;
+    padding-left:50px;
+    padding-right:50px;
+    font-size: 30px;
+    color: white;
+    
+}
+
+th,td
+{
+    padding-top: 0px;
+    padding-right:20px; 
+}
+
+.content
+{
+    width: 100%;
+    min-height:600px;
+    background-color:#222222;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    color: floralwhite;
+}
