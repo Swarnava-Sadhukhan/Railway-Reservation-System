@@ -10,7 +10,7 @@
     String type = request.getParameter("type");
     
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "root");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "");
     Statement st = con.createStatement();
     
     String query = "SELECT * FROM meals WHERE meal_id = '"+meal_id+"'";

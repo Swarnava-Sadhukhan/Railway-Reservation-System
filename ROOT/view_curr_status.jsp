@@ -16,23 +16,89 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="view_trains.css">
+        <!--  <link rel="stylesheet" href="view_trains.css">-->
+		<style>
+		button
+{
+	height:35px;
+	width:200px;
+}
+/*
+.link {
+  text-decoration: none;
+  color:black;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color:white;
+}*/
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.inner
+{
+    position: relative;
+    /*padding-left: 30%;
+    padding-right: 30%;*/
+}
+
+.form-text
+{
+    text-align: left;
+}
+
+
+.content
+{
+    /*padding-bottom: 10px;*/
+    position: relative;
+    text-align: center;
+	padding-bottom:30px;
+	padding-top:0px;
+}
+
+footer
+{
+    background-color: #9CE7F9;
+    color:black;
+    bottom: 0;
+    font-style: italic;
+	font-weight:bold;
+	height:30px;
+    width: 100%;
+	position:absolute;
+}
+		</style>
     </head>
     
-    <body>
+    <body style="background-color:#E7F9FE; color:black; padding-top:0px">
         
-        <jsp:include page = "includes/header.jsp"/>
-        
-        <div class="navbar navbar-inverse">
+        <div class="navbar navbar-inverse" style="background-color:#9CE7F9	; color:black; padding-top:0px;">
+			<jsp:include page = "includes/header.jsp"/>
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="https://www.iiests.ac.in" target="_blank">IIEST</a></li>
+                    <li><a href="home.jsp" style="color:black">Home</a></li>
+                   <!-- <li><a href="https://www.iiests.ac.in" target="_blank">IIEST</a></li>
                     <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 3</a></li>-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href = "logout_script.jsp"><span class = "glyphicon glyphicon-log-out"></span> Log out</a></li>
+                    <li><a href = "logout_script.jsp" style="color:black"><span class = "glyphicon glyphicon-log-out"></span> Log out</a></li>
                 </ul>
             </div>
         </div> 
@@ -42,7 +108,7 @@
             String to = request.getParameter("to");
             String date = request.getParameter("date");;
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/DBMS_Project", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "");
             Statement st = con.createStatement();
             String query = "SELECT train.train_no,train_name,source,departure,destination,arrival,ac_seat,ac_fare,non_ac_seat,non_ac_fare from train, passes_through, current_booking_status WHERE (train.train_no = current_booking_status.train_no and train.destination = '" + to +"' and train.train_no = passes_through.train_no and passes_through.station_id = '"+from+"' and current_booking_status.date = '"+date+"')"
                             +" UNION "+ 

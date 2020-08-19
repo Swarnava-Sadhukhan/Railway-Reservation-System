@@ -6,56 +6,148 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Railway Reservation System</title>
-        <link href="style.css" rel="stylesheet">
+        <!--<link href="style.css" rel="stylesheet">-->
         <script type="text/javascript" src="js/Action.js"></script>
+		<script>
+		function SignupSubmit()
+{
+    let a = document.getElementById("Email").value;
+    let b = document.getElementById("Fname").value;
+    let c = document.getElementById("Mname").value;
+    let d = document.getElementById("Lname").value;
+    let e = document.getElementById("Password").value;
+    let f = document.getElementById("Dob").value;
+    let g = document.getElementById("Gender").value;
+    let h = document.getElementById("City").value;
+    let i = document.getElementById("Contact").value;
+    let req='http://localhost:8080/signup_script.jsp?user_id='+a+'&first_name='+b+'&middle_name='+c+'&last_name='+d+'&password='+e+'&dob='+f+'&gender='+g+'&city='+h+'&contact='+i;
+    console.log(req);
+    window.location.href=req;
+}
+		</script>
+		<style>
+			  .navbar
+{
+    width: 100%;
+    height: 90px;
+    background-color:blue;
+    padding-left:50px;
+    padding-right:50px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:50px;
+    color: floralwhite;
+}
+
+.login
+{
+    width: 100%;
+    height: 600px;
+    background-color: #222222;
+    padding-top:100px;
+    padding-left:200px;
+    padding-right:50px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    align-items: flex-start;
+    color: dimgrey;
+}
+
+.loginForm
+{
+    width: 500px;
+    height: 30px;
+    background-color: #FFFFFF;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    align-content: center;
+    color: grey;
+    border: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+button
+{
+    background-color:#1D88EA;
+	color:black;
+    width: 200px;
+    height: 50px;
+    background-position: right;
+    font-family:"Liberation Serif", Times, "Times New Roman", "serif";
+    font-size:30px;
+    align-content: center;
+    border: none;
+    border-radius: 5px;
+}
+button:hover
+{
+    background-color:#007FFF;
+    color:white;
+}
+		</style>
     </head>
     
     <body>
-        <div class="navbar">
-            <img src="img/trian.png" href="index.html" alt="" height="150px" align="middle">
-            Railway Reservation System
+        <div class="navbar" style="background-color:#9CE7F9	; color:black; height:120px;" >
+           <img src="img/trian.png" href="index.html" alt="" height="120px" align="middle">
+            <a href="index.html" style="text-decoration:none;text-align:center; color:black">Railway Reservation System</a>
         </div>
-        <div class="login">
+        <div class="login" style="background-color:#E7F9FE; color:black;">
                 <table>
                     <tr>
                         <td>Email Id:</td>
-                        <td><input class="loginForm" type="email" name="Email" id="Email"></td>
+                        <td><input class="loginForm" type="email" name="Email" id="Email" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
                         <td>First Name:</td>
-                        <td><input class="loginForm" type="text" name="First Name" id="Fname"></td>
+                        <td><input class="loginForm" type="text" name="First Name" id="Fname" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
                         <td>Middle Name:</td>
-                        <td><input class="loginForm" type="text" name="Middle Name" id="Mname"></td>
+                        <td><input class="loginForm" type="text" name="Middle Name" id="Mname" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
                         <td>Last Name:</td>
-                        <td><input class="loginForm" type="text" name="Middle Name" id="Lname"></td>
+                        <td><input class="loginForm" type="text" name="Middle Name" id="Lname" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
                         <td>Gender:</td>
-                        <td><select style="font-size: 30px;color:dimgray;" name="Gender" id="Gender">
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
+                        <td><select style="font-size: 30px;color:dimgray;" name="Gender" id="Gender" style="background-color:#C6E8FF;color:black;">
+                                <option value="M" style="background-color:#C6E8FF;color:black;">Male</option>
+                                <option value="F"style="background-color:#C6E8FF;color:black;">Female</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>DOB:</td>
-                        <td><input class="loginForm" type="date" name="Dob" id="Dob"></td>
+                        <td><input class="loginForm" type="text" name="Dob" placeholder="Enter date as dd-mm-yyyy" id="Dob" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
                         <td>Contact:</td>
-                        <td><input class="loginForm" type="text" name="Phone" id="Contact"></td>
+                        <td><input class="loginForm" type="text" name="Phone" id="Contact" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                     <tr>
-                            <td>City:</td>
-                            <td><input class="loginForm" type="text" name="City" id="City"></td>
-                        </tr>
+						<td>City:</td>
+						<td><input class="loginForm" type="text" name="City" id="City" style="background-color:#C6E8FF;color:black;"></td>
+					</tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input class="loginForm" type="password" name="Password" id="Password"></td>
+                        <td><input class="loginForm" type="password" name="Password" id="Password" style="background-color:#C6E8FF;color:black;"></td>
                     </tr>
                                     
                         

@@ -45,22 +45,40 @@
                             <div class="panel panel-primary panel-transparent">
                                 <div class="panel-heading panel-heading">
                                     <p>
-                                        <h4>Add Meals.</h4>
+                                        <h4>Add New Trains.</h4>
                                     </p>
                                 </div>
                                 <div class="panel-body form-text">
-                                    <form method="get" action="add_meals_submit.jsp">
+                                    <form method="get" action="add_trains_submit.jsp">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Train Number" name="train_no" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="meal_id" placeholder="Meal ID" required>
+                                            <input type="text" class="form-control" name="train_name" placeholder="Train Name" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="price" placeholder="Price" required>
+                                            <input type="text" class="form-control" name="source" placeholder="Source Station ID" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="type" placeholder="Veg / Non Veg" required>
+                                            <input type="time" class="form-control" placeholder="Departure" name="departure" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="destination" placeholder="Destination Station ID" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="time" class="form-control" placeholder="Arrival" name="arrival" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="AC Seats" name="ac_seats" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="ac_fare" placeholder="AC Fare" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="non_ac_seats" placeholder="Non AC Seats" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="non_ac_fare" placeholder="Non AC Fare" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Save</button>
                                     </form>

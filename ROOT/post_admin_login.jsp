@@ -17,6 +17,71 @@
     </head>
 
     <style>
+	button
+{
+	height:35px;
+	width:200px;
+}
+/*
+.link {
+  text-decoration: none;
+  color:black;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color:white;
+}*/
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.inner
+{
+    position: relative;
+    /*padding-left: 30%;
+    padding-right: 30%;*/
+}
+
+.form-text
+{
+    text-align: left;
+}
+
+
+.content
+{
+    /*padding-bottom: 10px;*/
+    position: relative;
+    text-align: center;
+	padding-bottom:30px;
+	padding-top:0px;
+}
+
+footer
+{
+    background-color: #9CE7F9;
+    color:black;
+    bottom: 0;
+    font-style: italic;
+	font-weight:bold;
+	height:30px;
+    width: 100%;
+	position:relative;
+}
         .modal 
         {
             display: none; 
@@ -55,28 +120,27 @@
         }
     </style>
 
-    <body>
+    <body style="background-color:#E7F9FE; color:black; padding-top:0px;">
     	
-        <jsp:include page = "includes/header.jsp" />
-    	
-        <div class="navbar navbar-inverse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="https://www.iiests.ac.in" target="_blank">IIEST</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="reset_password.jsp">Reset Password</a></li>
+        <div class="navbar navbar-inverse" style="background-color:#9CE7F9	; color:black; padding-top:0px;">
+			<jsp:include page = "includes/header.jsp" />
+            <div class="container" >
+                <ul class="nav navbar-nav" style="background-color:#9CE7F9	; color:black; padding-top:0px;">
+                    <li><a href="home.jsp" style="color:black	; padding-left:25px"><b>Home</b></a></li>
+                    <!--<li><a href="https://www.iiests.ac.in" target="_blank">IIEST</a></li>
+                    <li><a href="#">Page 2</a></li>-->
+                    <li><a href="reset_password.jsp" style="color:black"><b>Reset Password</b></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href = "logout_script.jsp"><span class = "glyphicon glyphicon-log-out"></span> Log out</a></li>
+                    <li><a href = "logout_script.jsp" style="color:black"><span class = "glyphicon glyphicon-log-out"></span> <b>Log out</b></a></li>
                 </ul>
             </div>
         </div> 
         
-        <div class="banner_image">
-            <div class="container content">
-                <div class="row">
-                    <div class="inner">
+        <div class="banner_image" style="background-color:#E7F9FE; color:black; padding-top:0px">
+            <div class="container content" style="background-color:#9CE7F9">
+                <div class="row" style=" padding-top:0px;background-color:#9CE7F9	; color:black;">
+                    <div class="inner" style="background-color:#9CE7F9	; color:black; padding-top:0px;">
                         <h1>Welcome Admin</h1>
                         <button class="btn btn-primary" onclick="location.href = 'set_train_reservation_details.jsp'">
                             Set Train Reservation Details
@@ -106,7 +170,7 @@
                             Add Meals
                         </button>
 
-                        <div id="myModal1" class="modal">
+                        <div id="myModal1" class="modal" >
                             <div class="modal-content">
                                 <span class="close close1">&times;</span>
                                 <form method="post" action="view_stoppages.jsp">
@@ -117,7 +181,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div id="myModal2" class="modal">
+                        <div id="myModal2" class="modal" >
                             <div class="modal-content">
                                 <span class="close close2">&times;</span>
                                 <form method="post" action="view_meals.jsp">

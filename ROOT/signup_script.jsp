@@ -14,14 +14,14 @@
     try
     {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "root");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "");
         Statement st = con.createStatement();
         ResultSet rs;
         rs = st.executeQuery("select * from user where user_id='" + user_id + "'");
         if (rs.next()) 
         {
-            out.println("ID already exists");
-            //response.sendRedirect("index.jsp");
+            out.println("ID already exists <a href='index.html'>Try again</a>");
+            //response.sendRedirect("index.html");
         } 
         else 
         {
@@ -30,7 +30,8 @@
                 String query = "insert into user (user_id, first_name, middle_name, last_name, dob, gender, email, password, city, contact) values ('" + user_id + "' , '"  + first_name + "' , '" + middle_name + "' , '" + last_name + "','" + dob + "', '" + gender + "', '" + email + "', '" + password + "', '" + city + "','" + contact + "') ";
                 int rs1 = st.executeUpdate(query);
                 session.setAttribute("user_id",user_id);
-                //response.sendRedirect("home.jsp");
+				session.setAttribute("name",first_name);
+                response.sendRedirect("home.jsp");
             }
             catch(Exception e1)
             {

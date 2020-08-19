@@ -29,8 +29,7 @@
         <div class="navbar navbar-inverse">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="https://www.iiests.ac.in" target="_blank">IIEST</a></li>
+                    <li><a href="post_admin_login.jsp">Home</a></li>
                     <li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>
                 </ul>
@@ -44,7 +43,7 @@
             String query = "SELECT * FROM station";
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/DBMS_Project", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "");
             Statement st = con.createStatement();
 
             ResultSet rs;

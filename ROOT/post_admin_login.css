@@ -1,6 +1,6 @@
 header
 {
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     background-color: #060232;
     color:#faf8f8;
     width: 100%;
@@ -35,11 +35,11 @@ button
 .content
 {
     position: relative;
-    margin-top: 4.25%;
+    /*margin-top: 4.25%;*/
     max-width: 30%;
     margin-left: 35%;
     margin-right: 35%;
-    margin-bottom: 4.25%;
+   /* margin-bottom: 4.25%;*/
     background: rgba(0, 0, 0, 0.7);
 }
 
